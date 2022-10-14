@@ -7,6 +7,13 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
+require('./routes/apiRoute')(app);
+require('./routes/htmlRoute')(app);
+
+app.listen(3001, ()=> {
+    console.log(`server available at localhost${PORT}`);
+})
+
 
 
 
