@@ -1,4 +1,5 @@
 const path = require('path');
+
 const fs = require('fs');
 
 // app.get should read api notes from db.JSON and bring back all the saved notes.
@@ -14,8 +15,8 @@ module.exports = (app) => {
         res.JSON(db);
         // creating body for the title and text
         const inputNote= {
-            title:req.body.title,
-            text:req.body.text,
+            title: req.body.title,
+            text: req.body.text,
         };
 // db.push will push notes which is written in db.json
         db.push(inputNote);
