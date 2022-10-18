@@ -4,6 +4,7 @@ const router = require('express').Router();
 
 
 const fs = require('fs');
+const uuid = require ('uuid');
 
 // app.get should read api notes from db.JSON and bring back all the saved notes.
 
@@ -14,12 +15,12 @@ const fs = require('fs');
     });
 // app.post will send all the information and sending it back.
     router.post('/api/notes', (req,res)=>{
-        let db = fs.readFileSync('db/db.JSON');
+        let db = fs.readFileSync('db/db.json');
         db = JSON.parse(db);
         console.log('db1', db);
         res.json(db);
         // creating body for the title and text
-        const inputNote= {
+        let inputNote= {
             title: req.body.title,
             text: req.body.text,
         };
@@ -35,7 +36,7 @@ const fs = require('fs');
         const db = JSON.parse(fs.readFileSync('db/db.json'))
         const removeNotes = db.filter(item => item.id !== req.params.id);
         fs.writeFileSync('db/db.JSON', JSON.stringify(removeNotes));
-        res.JSON(removeNotes);
+        res.json(removeNotes);
     })
 
 // };
