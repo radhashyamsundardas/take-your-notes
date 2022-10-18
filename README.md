@@ -3,6 +3,7 @@ Note Taker Application
 
 ## Table of contents:
 1.[Project](#Project)
+NOTE TAKER APP
 
 
 2.## Description
@@ -15,13 +16,11 @@ There were couple of installations needed such as
 NODE.JS AND EXPRESS.JS 
 
 
-## LIVE LINK 
+
 4.[Usage](#Usage)
-
-
-
-5.[License](#License)## Usage
 It can be used to take notes and save them and delete them
+## LIVE LINK 
+
 ## License
 NA
 ## Contributors
